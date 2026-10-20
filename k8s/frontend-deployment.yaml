@@ -13,8 +13,11 @@ spec:
         app: frontend
     spec:
       containers:
-        - name: express-frontend
-          image: express-frontend:local
+        - name: flask-frontend
+          image: flask-frontend:local
           imagePullPolicy: Never
+          env:
+            - name: EXPRESS_BACKEND_URL
+              value: "http://backend:3000"
           ports:
-            - containerPort: 3000
+            - containerPort: 5000

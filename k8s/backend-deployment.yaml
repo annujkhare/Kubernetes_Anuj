@@ -13,8 +13,8 @@ spec:
         app: backend
     spec:
       containers:
-        - name: flask-backend
-          image: flask-backend:local
+        - name: express-backend
+          image: express-backend:local
           imagePullPolicy: Never
           ports:
-            - containerPort: 5000
+            - containerPort: 3000

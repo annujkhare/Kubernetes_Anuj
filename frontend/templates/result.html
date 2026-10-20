@@ -1,0 +1,4 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Submission Result</title>
+<style>body{font-family:Arial,sans-serif;text-align:center;padding:50px;background:#fff}.box{max-width:600px;margin:auto;padding:30px;border-radius:10px;background:#f4f4f4}h1{color:#111}a{color:#2563eb}</style></head>
+<body><div class="box"><h1>{% if success %}Form Submitted Successfully{% else %}Submission Failed{% endif %}</h1><p>{{ message }}</p>{% if name %}<p>Submitted name: <strong>{{ name }}</strong></p>{% endif %}<a href="/">Go Back</a></div></body></html>

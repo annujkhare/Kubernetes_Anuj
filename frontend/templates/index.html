@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kubernetes Form</title>
+  <style>
+    body{font-family:Arial,sans-serif;background:#f4f6f8;margin:0;padding:40px}
+    .container{max-width:560px;margin:auto;background:#fff;padding:30px;border-radius:12px;box-shadow:0 5px 20px #00000012}
+    h1{text-align:center} label{display:block;margin:15px 0 5px}
+    input,textarea{width:100%;padding:11px;box-sizing:border-box;border:1px solid #ccc;border-radius:6px}
+    textarea{height:100px}button{width:100%;margin-top:20px;padding:12px;border:0;border-radius:6px;background:#2563eb;color:#fff;font-size:16px;cursor:pointer}
+  </style>
+</head>
+<body><div class="container">
+  <h1>Flask Frontend Form</h1>
+  <p>Submit this form to send the data to the Express backend running in Kubernetes.</p>
+  <form action="/submit" method="POST">
+    <label for="name">Name</label><input id="name" name="name" placeholder="Enter your name" required>
+    <label for="email">Email</label><input id="email" type="email" name="email" placeholder="Enter your email" required>
+    <label for="message">Message</label><textarea id="message" name="message" placeholder="Enter your message" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</div></body></html>

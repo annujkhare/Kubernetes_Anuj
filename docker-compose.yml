@@ -1,17 +1,15 @@
-
 services:
   backend:
     build: ./backend
-    image: annujkhare/flask-backend:latest
-    ports:
-      - "5000:5000"
-
-  frontend:
-    build: ./frontend
-    image: annujkhare/express-frontend:latest
+    image: express-backend:local
     ports:
       - "3000:3000"
+  frontend:
+    build: ./frontend
+    image: flask-frontend:local
+    ports:
+      - "5000:5000"
     environment:
-      FLASK_URL: http://backend:5000
+      EXPRESS_BACKEND_URL: http://backend:3000
     depends_on:
       - backend
